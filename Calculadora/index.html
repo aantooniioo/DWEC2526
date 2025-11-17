@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Interactiva</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Calculadora Interactiva</h1>
+
+    <!-- Card principal -->
+    <div class="card">
+      <div class="inputs">
+        <label for="op1">Operando 1</label>
+        <input type="number" id="op1" placeholder="Introduce un número">
+
+        <label for="op2">Operando 2</label>
+        <input type="number" id="op2" placeholder="Introduce otro número">
+
+        <label for="resultado">Resultado</label>
+        <input type="text" id="resultado" readonly>
+      </div>
+
+      <!-- Botones de operaciones -->
+      <div class="botones">
+        <button onclick="calcular('+')" class="btn suma">+</button>
+        <button onclick="calcular('-')" class="btn resta">−</button>
+        <button onclick="calcular('*')" class="btn multi">×</button>
+        <button onclick="calcular('/')" class="btn divi">÷</button>
+      </div>
+    </div>
+
+    <!-- Log de operaciones -->
+    <div class="card log-card">
+      <h2>Historial de operaciones</h2>
+      <div id="log"></div>
+      <button onclick="borrarLog()" class="btn borrar">Borrar Historial</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
