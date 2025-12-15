@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Actividad 24</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <h1>Actividad 24: Mover Sprite</h1>
+
+  <div class="controls">
+    <button onclick="mostrarIzquierda()">Izquierda</button>
+    <button onclick="mostrarDerecha()">Derecha</button>
+    <button onclick="mostrarArriba()">Arriba</button>
+    <button onclick="mostrarAbajo()">Abajo</button>
+    <button onclick="volver()">Volver</button>
+    <button onclick="resetJuego()">Reset</button>
+
+    <!--  Botón para ir al proyecto separado de la Mejora 4 -->
+    <button onclick="irAMejora4()">Mejora 4 (Movimiento Automático)</button>
+  </div>
+
+  <!-- MEJORA 1: Campo de juego -->
+  <div id="campo">
+    <img id="uno" src="elbicho.jpg" class="imagen" alt="Imagen a mover" />
+
+    <!-- MEJORA 2: Objetivo -->
+    <div id="objetivo"></div>
+
+    <!-- MEJORA 2: Obstáculos -->
+    <div class="obstaculo" id="obst1"></div>
+    <div class="obstaculo" id="obst2"></div>
+  </div>
+
+  <!-- MEJORA 3: Panel de tiempo -->
+  <p id="tiempo"></p>
+  <p id="mensaje"></p>
+
+</body>
+</html>

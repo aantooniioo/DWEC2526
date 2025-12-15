@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: rgb(124, 87, 1);
+}
+
+#campo {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  background: rgb(176, 124, 2);
+  border: 3px solid #000;
+  overflow: hidden;
+}
+
+p {
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 26px;
+}
+
+#sprite {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 10px;
+  left: 10px;
+}
+
+button {
+  background: #b8860b;          /* Dorado oscuro */
+  border: none;
+  padding: 12px 22px;
+  margin: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+button:hover {
+  background: #d4a017;          /* Dorado más brillante */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+button:disabled {
+  background: #7a6a3a;          /* Dorado apagado */
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

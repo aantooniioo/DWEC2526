@@ -1,0 +1,104 @@
+body {
+  background: rgb(124, 87, 1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  background: #b8860b;          /* Dorado oscuro */
+  border: none;
+  padding: 12px 22px;
+  margin: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+button:hover {
+  background: #d4a017;          /* Dorado más brillante */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+button:disabled {
+  background: #7a6a3a;          /* Dorado apagado */
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+
+/* ✅ MEJORA 1: Campo */
+#campo {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  background: rgb(176, 124, 2);
+  transition: background-color 0.5s;
+  border: 3px solid #000;
+  overflow: hidden;
+}
+
+/* Sprite */
+.imagen {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: top 0.2s, left 0.2s;
+}
+
+/* ✅ MEJORA 2: Objetivo */
+#objetivo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: green;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* MEJORA 2: Obstáculos */
+.obstaculo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: red;
+}
+
+#obst1 {
+  top: 150px;
+  left: 200px;
+}
+
+#obst2 {
+  top: 250px;
+  left: 400px;
+}
+
+#tiempo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#mensaje {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+}
