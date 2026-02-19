@@ -1,18 +1,121 @@
 body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f1117;
+    color: white;
+}
+
+/* Título */
+h1 {
     text-align: center;
-    font-family: Arial;
-    background-color: #f4f4f4;
+    padding: 20px 0;
+    margin: 0;
+    background-color: #161b22;
+    border-bottom: 2px solid #222;
+    letter-spacing: 2px;
 }
 
-.personaje {
-    border: 1px solid black;
-    width: 200px;
-    margin: 10px auto;
-    padding: 10px;
-    background-color: white;
+/* Contenedor dividido */
+.contenedor {
+    display: flex;
+    height: 320px;
 }
 
+/* Lado jugador */
+.personaje:first-child {
+    flex: 1;
+    background: linear-gradient(to bottom, #1f2d3d, #16202a);
+    padding: 40px;
+    box-sizing: border-box;
+    border-right: 2px solid #000;
+}
+
+/* Lado enemigo */
+.personaje:last-child {
+    flex: 1;
+    background: linear-gradient(to bottom, #3a1f1f, #241212);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Títulos */
+.personaje h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Texto vida */
+.personaje p {
+    font-size: 18px;
+}
+
+/* Barra de vida */
+.barra {
+    width: 100%;
+    height: 22px;
+    background-color: #222;
+    margin-top: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.vida {
+    height: 100%;
+    width: 100%;
+    background-color: #2ecc71;
+    transition: width 0.3s;
+}
+
+/* Zona botones */
+.botones {
+    text-align: center;
+    margin-top: -30px; /* Hace que parezcan flotando */
+}
+
+/* Botones */
 button {
-    padding: 10px;
+    padding: 12px 28px;
+    margin: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+
+/* Atacar */
+#btnAtacar {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+}
+
+#btnAtacar:hover {
+    transform: translateY(-3px);
+}
+
+/* Reiniciar */
+#btnReiniciar {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+}
+
+#btnReiniciar:hover {
+    transform: translateY(-3px);
+}
+
+/* Desactivado */
+button:disabled {
+    background: gray;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* Mensaje */
+#mensaje {
+    text-align: center;
+    font-size: 20px;
     margin-top: 10px;
+    height: 30px;
 }
