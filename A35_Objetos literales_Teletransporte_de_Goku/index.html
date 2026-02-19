@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teletransporte de Goku</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -15,12 +14,18 @@
         <div id="goku"></div>
     </div>
 
-    <p>Vida: <span id="vida">100</span></p>
+    <p id="marcador">
+        <span id="textoVida">VIDA</span>
+        <span id="vida">100</span>
+    </p>
 
-    <p>Controles:</p>
-    <p>Flechas → Mover</p>
-    <p>Tecla V → Subir vida</p>
-    <p>Tecla B → Bajar vida</p>
+    <div id="controles">
+        <h2>Controles</h2>
+        <p>⬅ ➡ ⬆ ⬇ → Mover</p>
+        <p>Tecla V → Subir vida</p>
+        <p>Tecla B → Bajar vida</p>
+        <p>Tecla T → Teletransporte</p>
+    </div>
 
 </body>
 </html>
