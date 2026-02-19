@@ -1,4 +1,3 @@
-// OBJETO LITERAL jugador
 const jugador = {
     vida: 100,
     x: 100,
@@ -9,48 +8,60 @@ const jugador = {
     },
 
     bajarVida: function() {
-        this.vida = this.vida - 10
+        if(this.vida > 0){
+            this.vida = this.vida - 10
+        }
+    },
+
+    teletransporte: function() {
+        this.x = Math.floor(Math.random() * 550)
+        this.y = Math.floor(Math.random() * 250)
     }
 }
 
 const goku = document.getElementById("goku")
 const vidaTexto = document.getElementById("vida")
+const escenario = document.getElementById("escenario")
 
-// Evento teclado
 document.addEventListener("keydown", function(evento) {
 
-    // Movimiento
-    if(evento.key == "ArrowRight") {
+    if(evento.key == "ArrowRight" && jugador.x < 550) {
         jugador.x = jugador.x + 10
     }
 
-    if(evento.key == "ArrowLeft") {
+    if(evento.key == "ArrowLeft" && jugador.x > 0) {
         jugador.x = jugador.x - 10
     }
 
-    if(evento.key == "ArrowUp") {
+    if(evento.key == "ArrowUp" && jugador.y > 0) {
         jugador.y = jugador.y - 10
     }
 
-    if(evento.key == "ArrowDown") {
+    if(evento.key == "ArrowDown" && jugador.y < 250) {
         jugador.y = jugador.y + 10
     }
 
-    // Subir vida
     if(evento.key == "v") {
         jugador.subirVida()
     }
 
-    // Bajar vida
     if(evento.key == "b") {
         jugador.bajarVida()
     }
 
-    // Actualizar posición en pantalla
+    if(evento.key == "t") {
+        jugador.teletransporte()
+    }
+
     goku.style.left = jugador.x + "px"
     goku.style.top = jugador.y + "px"
 
-    // Actualizar vida en pantalla
     vidaTexto.textContent = jugador.vida
+
+    if(jugador.vida <= 30){
+        vidaTexto.style.color = "red"
+    } else {
+        vidaTexto.style.color = "black"
+    }
 
 })
