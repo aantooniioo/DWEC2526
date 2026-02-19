@@ -9,68 +9,83 @@ class Personaje {
 
     atacar(objetivo) {
         objetivo.vida = objetivo.vida - this.ataque;
+
+        // evitar vida negativa
+        if (objetivo.vida < 0) {
+            objetivo.vida = 0;
+        }
     }
 
 }
 
-// CLASE HIJA HEROE
+// CLASES HIJAS
 class Heroe extends Personaje {
-
     constructor(nombre, vida, ataque) {
         super(nombre, vida, ataque);
     }
-
 }
 
-// CLASE HIJA ENEMIGO
 class Enemigo extends Personaje {
-
     constructor(nombre, vida, ataque) {
         super(nombre, vida, ataque);
     }
-
 }
 
-// CREAR OBJETOS
-let heroe = new Heroe("Mario", 100, 20);
-let enemigo = new Enemigo("Bowser", 80, 15);
+// VARIABLES
+let heroe;
+let enemigo;
 
-// ELEMENTOS DEL DOM
 let vidaHeroeTxt = document.getElementById("vidaHeroe");
 let vidaEnemigoTxt = document.getElementById("vidaEnemigo");
 let mensaje = document.getElementById("mensaje");
-let boton = document.getElementById("btnAtacar");
+let botonAtacar = document.getElementById("btnAtacar");
+let botonReiniciar = document.getElementById("btnReiniciar");
+
+// FUNCIÓN INICIAR JUEGO
+function iniciarJuego() {
+    heroe = new Heroe("Mario", 100, 20);
+    enemigo = new Enemigo("Bowser", 80, 15);
+
+    botonAtacar.disabled = false;
+    mensaje.textContent = "";
+
+    mostrarVida();
+}
 
 // MOSTRAR VIDA
 function mostrarVida() {
-    vidaHeroeTxt.textContent = "Vida Héroe: " + heroe.vida;
-    vidaEnemigoTxt.textContent = "Vida Enemigo: " + enemigo.vida;
+    vidaHeroeTxt.textContent = "Vida: " + heroe.vida;
+    vidaEnemigoTxt.textContent = "Vida: " + enemigo.vida;
 }
 
-mostrarVida();
+// EVENTO ATACAR
+botonAtacar.addEventListener("click", function() {
 
-// EVENTO BOTÓN
-boton.addEventListener("click", function() {
-
-    // Héroe ataca
     heroe.atacar(enemigo);
-
-    mensaje.textContent = "El héroe ha atacado!";
+    mensaje.textContent = "El héroe ataca al enemigo";
 
     if (enemigo.vida > 0) {
         enemigo.atacar(heroe);
     }
 
     if (heroe.vida <= 0) {
-        mensaje.textContent = "💀 El héroe ha perdido";
-        boton.disabled = true;
+        mensaje.textContent = "💀 Has perdido";
+        botonAtacar.disabled = true;
     }
 
     if (enemigo.vida <= 0) {
-        mensaje.textContent = "🏆 El héroe ha ganado";
-        boton.disabled = true;
+        mensaje.textContent = "🏆 Has ganado";
+        botonAtacar.disabled = true;
     }
 
     mostrarVida();
 
 });
+
+// EVENTO REINICIAR
+botonReiniciar.addEventListener("click", function() {
+    iniciarJuego();
+});
+
+// INICIAR AL CARGAR
+iniciarJuego();
