@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4e73df, #1cc88a);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+    color: white;
+}
+
+/* Caja blanca central */
+.contenedor {
+    background-color: white;
+    width: 500px;
+    margin: 60px auto;
+    padding: 40px;           /* 👈 ESPACIO INTERNO */
+    border-radius: 15px;
+}
+
+#palabra {
+    font-size: 40px;
+    letter-spacing: 12px;
+    margin: 30px 0;          /* 👈 separación arriba y abajo */
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 180px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+#mensaje {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#intentos {
+    margin-top: 10px;
+    font-size: 18px;
+}
