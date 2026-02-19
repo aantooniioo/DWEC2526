@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Juego por Turnos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
     <h1>⚔️ Juego de Combate ⚔️</h1>
 
-    <div class="personaje">
-        <h2 id="nombreJugador"></h2>
-        <p>Vida: <span id="vidaJugador"></span></p>
+    <div class="contenedor">
+
+        <div class="personaje">
+            <h2 id="nombreJugador"></h2>
+            <p>Vida: <span id="vidaJugador"></span></p>
+            <div class="barra">
+                <div id="barraJugador" class="vida"></div>
+            </div>
+        </div>
+
+        <div class="personaje">
+            <h2 id="nombreEnemigo"></h2>
+            <p>Vida: <span id="vidaEnemigo"></span></p>
+            <div class="barra">
+                <div id="barraEnemigo" class="vida"></div>
+            </div>
+        </div>
+
     </div>
 
-    <div class="personaje">
-        <h2 id="nombreEnemigo"></h2>
-        <p>Vida: <span id="vidaEnemigo"></span></p>
-    </div>
-
-    <button id="btnAtacar">Atacar</button>
+    <button id="btnAtacar">⚔️ Atacar</button>
+    <button id="btnReiniciar">🔄 Reiniciar</button>
 
     <p id="mensaje"></p>
 
 </body>
 </html>
+
