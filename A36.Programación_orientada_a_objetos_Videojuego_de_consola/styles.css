@@ -1,11 +1,77 @@
 body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: white;
     text-align: center;
-    font-family: Arial;
-    background-color: #f2f2f2;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 50px 0;
+}
+
+.personaje {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px black;
+    transition: transform 0.2s;
+}
+
+.personaje:hover {
+    transform: scale(1.05);
+}
+
+.personaje h2 {
+    margin-bottom: 15px;
+}
+
+.personaje p {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 button {
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px 30px;
+    font-size: 18px;
+    margin: 10px;
     cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#btnAtacar {
+    background-color: crimson;
+    color: white;
+}
+
+#btnAtacar:hover {
+    background-color: darkred;
+}
+
+#btnReiniciar {
+    background-color: #444;
+    color: white;
+}
+
+#btnReiniciar:hover {
+    background-color: #666;
+}
+
+#mensaje {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
 }
