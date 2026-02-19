@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fase 3 - TodoList</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>TodoList</h1>
+
+    <label>Nombre tarea</label>
+    <input type="text" id="nombreTarea" placeholder="Ej: Comprar pan">
+
+    <label>Descripción</label>
+    <input type="text" id="descTarea" placeholder="Ej: En el chino">
+
+    <label>Fecha</label>
+    <input type="date" id="fechaTarea">
+
+    <button id="btnCrear">Crear</button>
+    <button id="btnBorrarTodo" class="danger">Eliminar todas</button>
+
+    <ul id="lista"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

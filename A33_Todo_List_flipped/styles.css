@@ -1,0 +1,74 @@
+/* Estilo general */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #444;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+/* Grid de tarjetas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjetas */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Texto descriptivo */
+.card p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* Enlaces */
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Enlaces deshabilitados */
+a.disabled {
+  pointer-events: none;
+  color: gray;
+  text-decoration: none;
+  font-style: italic;
+}

@@ -1,0 +1,32 @@
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f6fb;
+  margin:0;
+  padding:20px;
+}
+.card{
+  max-width:420px;
+  margin:0 auto;
+  background:#fff;
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+h1{ margin:0 0 10px; font-size:20px; }
+label{ display:block; margin:10px 0 6px; font-weight:600; }
+input{
+  width:100%;
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+button{
+  width:100%;
+  margin-top:12px;
+  padding:10px;
+  border:0;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+}
+p{ margin:12px 0 0; }
