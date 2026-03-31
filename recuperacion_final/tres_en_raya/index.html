@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tres en raya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Tres en raya</h1>
+
+    <!-- Panel inicial -->
+    <div id="panelInicio">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+
+        <br><br>
+
+        <label for="turno">Turno:</label>
+        <select id="turno">
+            <option value="X">X</option>
+            <option value="O">O</option>
+        </select>
+
+        <br><br>
+
+        <label for="rondas">Rondas:</label>
+        <input type="number" id="rondas" value="3">
+
+        <br><br>
+
+        <button id="empezar">Empezar</button>
+    </div>
+
+    <!-- Zona de juego -->
+    <div id="juego">
+
+        <!-- Marcador mejorado -->
+        <div id="marcador">
+
+            <!-- Jugador -->
+            <div class="dato">
+                <span class="label">Jugador</span>
+                <span id="nombreJugador" class="valor"></span>
+            </div>
+
+            <!-- Puntos -->
+            <div class="dato">
+                <span class="label">Puntos</span>
+                <span id="puntos" class="valor">0</span>
+            </div>
+
+            <!-- Jugadas -->
+            <div class="dato">
+                <span class="label">Jugadas</span>
+                <span id="jugadas" class="valor">0</span>
+            </div>
+
+            <!-- Restantes -->
+            <div class="dato">
+                <span class="label">Restantes</span>
+                <span id="restantes" class="valor">0</span>
+            </div>
+
+        </div>
+
+        <button id="abandonar">Abandonar</button>
+
+        <!-- Tablero generado desde JS -->
+        <div id="tablero"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modalFinal">
+        <p id="mensajeFinal"></p>
+    </div>
+
+    <!-- Notificación de error -->
+    <div id="errorNombre">
+        <p id="mensajeError"></p>
+    </div>
+
+    <!-- Librería confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
